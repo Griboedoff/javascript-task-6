@@ -66,11 +66,7 @@ Iterator.prototype = {
         return this.index >= this.array.length;
     },
     next() {
-        if (this.done()) {
-            return null;
-        }
-
-        return this.array[this.index++];
+        return this.done() ? null : this.array[this.index++];
     }
 };
 
